@@ -16,8 +16,8 @@ export class AppComponent {
       icon: 'home'
     },
     {
-      title: 'Consulta',
-      url: '/list',
+      title: 'Filmes e Jogos',
+      url: '/filmes',
       icon: 'list'
     }
   ];

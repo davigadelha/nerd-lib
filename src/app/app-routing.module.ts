@@ -9,11 +9,15 @@ const routes: Routes = [
   },
   {
     path: 'home',
-    loadChildren: './home/home.module#HomePageModule'
+    loadChildren: './pages/home/home.module#HomePageModule'
   },
   {
-    path: 'list',
-    loadChildren: './list/list.module#ListPageModule'
+    path: 'filmes',
+    loadChildren: './pages/filmes/filmes.module#FilmesPageModule'
+  },
+  {
+    path: 'filmes/:id',
+    loadChildren: './pages/filme-detalhes/filme-detalhes.module#FilmeDetalhesPageModule'
   }
 ];
 
