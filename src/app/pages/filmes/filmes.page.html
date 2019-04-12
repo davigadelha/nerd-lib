@@ -9,15 +9,16 @@
 
 <ion-content padding>
 
-    <ion-searchbar [(ngModel)]="termoBusca" (ionChange)="termoChanged($event)"></ion-searchbar>
+    <ion-searchbar [(ngModel)]="termoBusca" (ionChange)="termoChanged($event)" (ionCancel)="termoCanceled($event)"></ion-searchbar>
  
     <ion-item>
       <ion-label>Escolha o Tipo da pesquisa</ion-label>
       <ion-select [(ngModel)]="tipo" (ionChange)="termoChanged($event)">
-        <ion-select-option value="todos">Todos</ion-select-option>
-        <ion-select-option value="filme">Filme</ion-select-option>
-        <ion-select-option value="serie">Série</ion-select-option>
-        <ion-select-option value="episodio">Episódio</ion-select-option>
+        <ion-select-option value="">Todos</ion-select-option>
+        <ion-select-option value="movie">Filme</ion-select-option>
+        <ion-select-option value="series">Série</ion-select-option>
+        <ion-select-option value="episode">Episódio</ion-select-option>
+        <ion-select-option value="game">Jogo</ion-select-option>
       </ion-select>
     </ion-item>
    
@@ -35,6 +36,7 @@
    
         <ion-icon slot="end" *ngIf="filme.Type == 'movie'" name="videocam"></ion-icon>
         <ion-icon slot="end" *ngIf="filme.Type == 'series'" name="tv"></ion-icon>
+        <ion-icon slot="end" *ngIf="filme.Type == 'episode'" name="tv"></ion-icon>
         <ion-icon slot="end" *ngIf="filme.Type == 'game'" name="logo-game-controller-b"></ion-icon>
    
       </ion-item>

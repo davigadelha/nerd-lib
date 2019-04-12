@@ -22,4 +22,7 @@ export class FilmesPage implements OnInit {
     // Call our service function which returns an Observable
     this.resultados = this.filmeService.pesquisarFilmes(this.termoBusca, this.tipo);
   }
+  termoCanceled(){
+    this.resultados = null;
+  }
 }
